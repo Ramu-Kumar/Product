@@ -1,0 +1,446 @@
+/* standard variables and values for website */
+
+$bgcolor: #ffff;
+$font-md-light: 14px;
+$button-color: #3f6ef7;
+$font-family: "Cambria, Cochin, Georgia, Times, " Times New Roman ", serif";
+
+/* standard Mixins */
+
+@mixin display-space {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+@mixin display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bt-col {
+  color: $button-color;
+}
+
+.cursor {
+  cursor: pointer;
+}
+.center {
+  width: 100%;
+  text-align: center;
+}
+
+font {
+  font-family: $font-family;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.brand {
+  color: $button-color;
+  font-size: 35px;
+  font-family: "sans-serif";
+  margin-left: 15px;
+}
+
+.profile-icon {
+  @include display;
+}
+
+.inline {
+  margin: 10px 0px;
+}
+
+.display {
+  display: flex;
+}
+
+/* Using  the variables */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  background: #f6f6f6;
+}
+
+.pin_code_submit {
+  width: 22px;
+  height: 22px;
+  background: $button-color;
+  @include display;
+  border-radius: 50%;
+}
+.nav_bar {
+  @include display-space;
+  padding: 0.5% 2%;
+  box-shadow: 0px 0px 15px #aaaaaa;
+  background: $bgcolor;
+}
+.location_search {
+  @extend .pos-rel;
+  width: 150px;
+  @include display;
+}
+
+.location_search input {
+  width: 150px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid gray;
+  padding: 5px 25px;
+}
+
+.nav_location {
+  position: absolute;
+  left: 5%;
+  top: 23%;
+  font-size: 18px;
+}
+.location_text {
+  font-size: $font-md-light;
+}
+
+.dashboard_content {
+  display: flex;
+}
+.dashboard_left_content {
+  padding: 15px;
+  width: 40%;
+  height: 100%;
+  margin: 5px;
+  background: $bgcolor;
+}
+.dashboard_right_content {
+  padding: 15px;
+  width: 60%;
+  height: 100%;
+  margin: 5px;
+  background: $bgcolor;
+}
+
+.product_space {
+  width: 85%;
+  margin: 20px auto;
+  height: 35%;
+  position: sticky;
+  z-index: 111;
+  top: 0;
+}
+.pin_code {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  background: $bgcolor;
+  border: 1px solid #aaa;
+}
+.view_360 {
+  text-align: center;
+  padding: 8px 15px;
+  color: $button-color;
+  border: 2px solid $button-color;
+  border-radius: 15px;
+  font-weight: bold;
+  background: $bgcolor;
+  margin: 10px 0px;
+}
+
+.slide-show {
+  @include display;
+}
+
+.row {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  width:85%;
+}
+
+/* Six columns side by side */
+.column {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  background: #aaa;
+}
+
+.prev-button,
+.next-button {
+  @include display;
+  width: 50px;
+  height: 50px;
+}
+
+.prev-button a,
+.next-button a {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  background: black;
+  border-radius: 50%;
+  color: white;
+}
+
+.submit_button {
+  @include display;
+  margin: 25px 0px;
+}
+
+.submit_button2 {
+  @include display;
+  margin: 25px 0px;
+  justify-content: space-evenly;
+}
+
+.submit_button2 .add-button,.submit_button2 .purchase-button{
+  width: 49%;
+}
+
+.submit_button2 .add-button,.submit_button2 .purchase-button{
+  padding: 15px;
+}
+
+.add-button,
+.purchase-button {
+  padding: 5px 15px;
+  width: 150px;
+  border: 2px solid $button-color;
+  font-size: $font-md-light;
+  outline: none;
+}
+.add-button {
+  color: $button-color;
+  background: $bgcolor;
+}
+.purchase-button {
+  background: $button-color;
+  color: $bgcolor;
+}
+.price_now {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: $font-family;
+}
+.product-head {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: $font-family;
+}
+.price_old {
+  font-size: 20px;
+  position: relative;
+}
+.price_old:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.cost_detail,
+.review {
+  width: 50%;
+}
+.space {
+  margin-left: 20px;
+}
+.offer_table,
+.offer_head {
+  border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+.right_content_split {
+  display: flex;
+}
+
+.offer_table td,
+.offer_table th {
+  padding: 8px;
+  text-align: left;
+}
+.offer_table td {
+  font-size: $font-md-light;
+}
+.offer_table th,
+.offer_head {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.review {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mob_button {
+  display: none;
+}
+
+.review-start-icon {
+  font-size: 18px;
+  color: cornflowerblue;
+}
+.spec-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.green{
+  color:green;
+  font-weight: bold;
+}
+
+.spec-button button {
+  font-weight: bold;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid gray;
+  background: #e2e9ff;
+}
+.content_feature{
+  display: flex;
+}
+
+.product_space img {
+  max-width: 100%;
+  width: 500px;
+}
+
+
+
+.offer_table th,
+.offer_head {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1250px) {
+  .offer_table th{
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 1150px) {
+  .dashboard_content {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    font-size: 30px;
+  }
+  .product-head {
+    font-size: 18px;
+  }
+  .dashboard_left_content {
+    width: 100%;
+  }
+  .dashboard_right_content {
+    width: 100%;
+  }
+  .product_space {
+    width: 50%;
+    position: relative;
+  }
+  .mob_button {
+    display: block;
+  }
+  .submit_button {
+    display: none;
+  }
+  .submit_button2 {
+    margin: 0px;
+  }
+  .spec-button {
+    display: none;
+  }
+  .right_content_split {
+    display: inherit;
+  }
+  .cost_detail,
+  .review {
+    width: 100%;
+  }
+  .offer_table{
+    width:100%;
+  }
+  .review{
+    justify-content:start;
+    margin:20px 0px;
+  }
+  .price_now {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .brand{
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .brand{
+    font-size: 20px;
+  }
+  .product-head {
+    font-size: 13px;
+    
+  }
+  .price_now {
+    font-size: 25px;
+  }
+  .content_feature{
+    display: inherit;
+  }
+  .location_search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  
+  .column {
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+  }
+}
